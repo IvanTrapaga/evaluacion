@@ -11,6 +11,7 @@ public class Triangulo implements Figuras {
         this.lado1=lado1;
         this.lado2=lado2;
         this.angulo=angulo;
+        lado3=Math.sqrt((lado1^2+lado2^2)*(lado1*lado2*Math.cos(angulo)));
     }
 
     @Override
@@ -20,13 +21,12 @@ public class Triangulo implements Figuras {
 
     @Override
     public double calcularArea() {
-        return 0;
+        return (lado1*lado2*Math.sin(angulo))/2;
     }
 
     @Override
     public double calcularPerimetro() {
-        lado3=Math.sqrt(lado1^2+lado2^2);
-        return lado3;
+        return (lado1+lado2+lado3);
     }
 
     @Override

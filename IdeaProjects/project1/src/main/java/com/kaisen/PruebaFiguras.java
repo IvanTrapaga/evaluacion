@@ -17,6 +17,8 @@ public class PruebaFiguras
     static Scanner scanner=new Scanner(System.in);
     static int lado1;
     static int lado2;
+    static double area;
+    static double perimetro;
 
     public static void main( String[] args )
     {
@@ -50,8 +52,9 @@ public class PruebaFiguras
                         obj = new TrianguloRectangulo(lado1);
                         break;
                     case 4:
-                        obj.calcularArea();
-                        obj.calcularPerimetro();
+                        area=obj.calcularArea();
+                        perimetro=obj.calcularPerimetro();
+                        System.out.println("Area: "+area+"\nPerimetro: "+perimetro);
                         obj.dibujarTxt();
                         break;
                     case 5:
